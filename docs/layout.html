@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<style>
+    p {
+        color: navy;
+        text-indent: 30px;
+        text-transform: uppercase;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <meta name="viewport" content="initial-scale = 1" width="device-width">
+    <title>Random Thoughts</title>
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+</body>
+
+</html>

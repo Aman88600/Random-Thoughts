@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="form-center">
+    <form action="/" method="post">
+        <input type="text" autocomplete="off" placeholder="Enter Your Thoughts" name="anime" class="form__field">
+        <form action="/clear">
+            <input type="hidden" value="Clear">
+        </form>
+        {% for chat in chats %}
+        <table id="customers">
+            <tr>
+                <td>{{ chat.chat }}</td>
+                <form action="/remove" method="post">
+                    <input name="id" type="hidden" value="{{ chat.id }}">
+                    <input type="submit" value="remove">
+                </form>
+            </tr>
+        </table>
+        {% endfor %}
+    </form>
+</div>
+{% endblock %}
